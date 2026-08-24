@@ -1,0 +1,70 @@
+PLAYNOW — Website
+=================
+
+Struktur
+--------
+index.html              Startseite: Intro-Animation, Wortmarke, Übersicht
+gaming.html             High-End Gaming PCs, Console Zone, Snacks & Drinks
+preise.html             Schülerangebot 3 € und regulärer Preis 5 €
+oeffnungszeiten.html    Zeiten mit Live-Status
+esports.html            CS2 / Turniere
+kontakt.html            Kontakt, Standort, Instagram
+impressum.html          Platzhalter
+datenschutz.html        Platzhalter
+assets/style.css        gesamtes Design (Farben ganz oben unter :root)
+assets/app.js           Intro, Navigation, Öffnungszeiten-Logik
+assets/logo.webp        Logo für die Website
+assets/logo.png         Logo in voller Auflösung (Social Media, Druck)
+
+Starten
+-------
+index.html doppelklicken — läuft ohne Server.
+Online: den kompletten Ordnerinhalt auf den Webspace laden, oder den
+Ordner auf netlify.com bzw. vercel.com ziehen.
+
+Intro-Animation
+---------------
+Beim ersten Aufruf erscheinen Logo und Schriftzug groß in der Mitte und
+fahren anschließend auf ihre Position oben links. Innerhalb derselben
+Browser-Sitzung wird das Intro nur einmal gezeigt (Wechsel zwischen den
+Seiten läuft ohne Wartezeit). Klick oder Tastendruck überspringt es.
+
+Zum Testen: Browser-Tab schließen und neu öffnen, oder in den
+Entwicklertools unter "Session Storage" den Eintrag pn_intro löschen.
+
+Dauer ändern: assets/app.js, Zeile mit "setTimeout(fly, 1500)".
+Ganz abschalten: im HTML den Block <div class="intro" id="intro"> löschen.
+
+Noch einzutragen
+----------------
+In allen Dateien nach "EINTRAGEN" suchen — die Stellen sind auf der Seite
+gelb dargestellt und im Code mit "PLATZHALTER" kommentiert:
+
+- Adresse, Telefon, E-Mail       -> kontakt.html
+- Google-Maps-Link               -> alle Seiten, Suche nach "ADRESSE+HIER+EINTRAGEN"
+- Impressum, Datenschutz         -> impressum.html, datenschutz.html
+- Hardware-Specs                 -> gaming.html
+- Konsolenmodelle                -> gaming.html
+- Snack-Sortiment und Preise     -> gaming.html
+- Turniertermine                 -> esports.html
+
+Öffnungszeiten ändern
+---------------------
+assets/app.js, Objekt HOURS im Abschnitt ÖFFNUNGSZEITEN.
+Minuten ab Mitternacht: 12*60 = 12:00 Uhr, 1440 = 00:00 Uhr.
+Danach die sichtbaren Zeiten anpassen in oeffnungszeiten.html,
+kontakt.html und im Footer jeder Seite.
+Das Attribut data-days markiert, welche Zeile "heute" ist
+(0 = Sonntag, 1 = Montag ... 6 = Samstag).
+
+Preise ändern
+-------------
+preise.html — die große Zahl steht direkt im Text, ebenso 5 €.
+Zusätzlich auf index.html im Streifen unter dem Hero.
+
+Schriften
+---------
+Big Shoulders Display, Chivo Mono und Archivo kommen von Google Fonts.
+Für eine lokale Einbindung (DSGVO): Schriften bei fonts.google.com laden,
+in assets/fonts/ ablegen, den <link> in allen HTML-Dateien durch
+@font-face-Regeln in style.css ersetzen.
