@@ -23,7 +23,7 @@
     let seen = false;
     try { seen = sessionStorage.getItem("pn_intro") === "1"; } catch (e) {}
 
-    if (true) {
+    if (seen || slow) {
       intro.remove();
       startPage();
     } else {
