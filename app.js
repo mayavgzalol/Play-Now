@@ -126,13 +126,13 @@
      1440 = 00:00 Uhr.  >>> Zeiten NUR hier ändern. <<<
      ========================================================================== */
   const HOURS = {
-    0: { open: 12 * 60,      close: 1440 }, // Sonntag
-    1: { open: 12 * 60,      close: 1440 }, // Montag
-    2: { open: 12 * 60,      close: 1440 }, // Dienstag
-    3: { open: 12 * 60,      close: 1440 }, // Mittwoch
-    4: { open: 12 * 60,      close: 1440 }, // Donnerstag
-    5: { open: 14 * 60 + 15, close: 1440 }, // Freitag
-    6: { open: 12 * 60,      close: 1440 }  // Samstag
+    0: { open: 14 * 60 + 30, close: 1440 }, // Sonntag
+    1: { open: 14 * 60 + 30, close: 1440 }, // Montag
+    2: { open: 14 * 60 + 30, close: 1440 }, // Dienstag
+    3: { open: 14 * 60 + 30, close: 1440 }, // Mittwoch
+    4: { open: 14 * 60 + 30, close: 1440 }, // Donnerstag
+    5: { open: 14 * 60 + 30, close: 1440 }, // Freitag
+    6: { open: 14 * 60 + 30, close: 1440 }  // Samstag
   };
   const fmt = m => `${String(Math.floor(m / 60) % 24).padStart(2, "0")}:${String(m % 60).padStart(2, "0")}`;
 
