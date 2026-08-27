@@ -188,7 +188,7 @@ body.locked{overflow:hidden}
 @media (max-width:900px){
   .hero{padding-top:130px}
   .hero-top{grid-template-columns:1fr;gap:24px}
-  .hero-logo{width:120px;order:-1}
+  .hero-logo{width:120px;height:auto;order:-1}
   .hero-foot{grid-template-columns:1fr}
   .hero-foot div + div{border-left:0;border-top:1px solid var(--hair);padding-left:0}
 }
